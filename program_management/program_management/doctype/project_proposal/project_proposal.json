@@ -1,0 +1,261 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-07-18 20:24:40.836026",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_title",
+  "fund_code",
+  "budget",
+  "column_break_3",
+  "planned_start_date",
+  "planned_end_date",
+  "project_duration",
+  "dead_line",
+  "currency",
+  "section_break_7",
+  "project_summery",
+  "section_break_13",
+  "targeted_programs",
+  "section_break_18",
+  "donors",
+  "address_contacts",
+  "contact_html",
+  "column_break_17",
+  "section_break_20",
+  "needs_assessment_summary",
+  "grant_request_justification",
+  "section_break_24",
+  "accountability_to_affected_persons",
+  "protection_mainstreaming_and_gbv",
+  "gam_reference_number",
+  "risk_management_section",
+  "risk_management",
+  "access",
+  "monitoring_and_reporting_plan",
+  "section_break_32",
+  "coordination_and_complementary",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PP-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Small Text",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Project Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fund_code",
+   "fieldtype": "Data",
+   "label": "Fund Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Budget",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_start_date",
+   "fieldtype": "Date",
+   "label": "Planned Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_end_date",
+   "fieldtype": "Date",
+   "label": "Planned End Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "project_duration",
+   "fieldtype": "Data",
+   "label": "Project Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dead_line",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Summery"
+  },
+  {
+   "fieldname": "project_summery",
+   "fieldtype": "Text Editor",
+   "label": "Project Summery",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "targeted_programs",
+   "fieldtype": "Table",
+   "label": "Targeted Programs",
+   "options": "Targeted Programs",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "donors",
+   "fieldtype": "Table",
+   "label": "Donors",
+   "options": "Donors Details"
+  },
+  {
+   "fieldname": "address_contacts",
+   "fieldtype": "Section Break",
+   "label": "Contacts",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "COUNTRY CONTEXT & FUNDING"
+  },
+  {
+   "fieldname": "needs_assessment_summary",
+   "fieldtype": "Small Text",
+   "label": "Needs Assessment Summary"
+  },
+  {
+   "fieldname": "grant_request_justification",
+   "fieldtype": "Small Text",
+   "label": "Grant Request Justification"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "PARTICIPATION OF AND ACCOUNTABILITY TO THE AFFECTED POPULATION"
+  },
+  {
+   "fieldname": "accountability_to_affected_persons",
+   "fieldtype": "Text Editor",
+   "label": "Accountability to Affected Persons"
+  },
+  {
+   "fieldname": "protection_mainstreaming_and_gbv",
+   "fieldtype": "Text Editor",
+   "label": "Protection Mainstreaming and GBV"
+  },
+  {
+   "fieldname": "gam_reference_number",
+   "fieldtype": "Small Text",
+   "label": "GAM Reference Number"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "risk_management_section",
+   "fieldtype": "Section Break",
+   "label": "RISK MANAGEMENT"
+  },
+  {
+   "fieldname": "risk_management",
+   "fieldtype": "Small Text",
+   "label": "Risk Management"
+  },
+  {
+   "fieldname": "access",
+   "fieldtype": "Small Text",
+   "label": "Access"
+  },
+  {
+   "fieldname": "monitoring_and_reporting_plan",
+   "fieldtype": "Small Text",
+   "label": "Monitoring and Reporting plan"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "COORDINATION AND COMPLEMENTARY"
+  },
+  {
+   "fieldname": "coordination_and_complementary",
+   "fieldtype": "Small Text",
+   "label": "Coordination and Complementary"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Proposal",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-07-18 21:15:57.057660",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Project Proposal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "project_title",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "project_title",
+ "track_changes": 1
+}

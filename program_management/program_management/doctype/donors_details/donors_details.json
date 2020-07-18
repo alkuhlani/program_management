@@ -1,0 +1,36 @@
+{
+ "creation": "2020-07-18 20:21:48.281164",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "donor",
+  "donor_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "donor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Donor",
+   "options": "Donor"
+  },
+  {
+   "fetch_from": "donor.donor_name",
+   "fieldname": "donor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Donor Name"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-18 23:40:27.011429",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Donors Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
