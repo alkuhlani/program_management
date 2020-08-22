@@ -1,0 +1,65 @@
+{
+ "creation": "2020-07-19 23:51:59.171109",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity",
+  "stakeholder",
+  "communication_type",
+  "required_information",
+  "responsibility",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity"
+  },
+  {
+   "fieldname": "stakeholder",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stakeholder"
+  },
+  {
+   "fieldname": "communication_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Communication Type",
+   "options": "Direct Communication\nPhone\nEmail\nSMS"
+  },
+  {
+   "fieldname": "required_information",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Required Information"
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Responsibility",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-19 23:58:12.430208",
+ "modified_by": "t.azzan@partner-cons.com",
+ "module": "Program Management",
+ "name": "Communication Plan Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

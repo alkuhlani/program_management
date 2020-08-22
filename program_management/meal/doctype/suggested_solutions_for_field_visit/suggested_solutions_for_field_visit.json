@@ -1,0 +1,49 @@
+{
+ "creation": "2020-08-14 23:41:14.831517",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "actions_to_improve_performance_and_work",
+  "responsible_for_implementation",
+  "time_period",
+  "responsible_for_follow_up_and_verification_of_implementation"
+ ],
+ "fields": [
+  {
+   "fieldname": "actions_to_improve_performance_and_work",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Actions to Improve Performance and Work"
+  },
+  {
+   "fieldname": "responsible_for_implementation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Responsible for Implementation",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "time_period",
+   "fieldtype": "Date",
+   "label": "Time Period"
+  },
+  {
+   "fieldname": "responsible_for_follow_up_and_verification_of_implementation",
+   "fieldtype": "Link",
+   "label": "Responsible for Follow-up and Verification of Implementation",
+   "options": "Employee"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-15 10:57:09.693603",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Suggested Solutions for Field Visit",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

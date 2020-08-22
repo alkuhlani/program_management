@@ -1,7 +1,7 @@
 {
  "allow_events_in_timeline": 1,
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "format:PP-{project_no}",
  "creation": "2020-07-18 20:24:40.836026",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -15,7 +15,7 @@
   "planned_start_date",
   "planned_end_date",
   "project_duration",
-  "dead_line",
+  "project_no",
   "currency",
   "section_break_7",
   "project_summery",
@@ -92,12 +92,6 @@
    "fieldtype": "Data",
    "label": "Project Duration",
    "read_only": 1
-  },
-  {
-   "fieldname": "dead_line",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Deadline"
   },
   {
    "fieldname": "currency",
@@ -231,10 +225,16 @@
    "options": "Project Proposal",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "project_no",
+   "fieldtype": "Data",
+   "label": "Project No",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-07-18 21:15:57.057660",
+ "modified": "2020-07-22 17:26:25.464435",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Project Proposal",

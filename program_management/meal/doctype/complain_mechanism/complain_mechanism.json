@@ -1,0 +1,137 @@
+{
+ "creation": "2020-07-26 14:03:57.842303",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "project_name",
+  "fund_project_code",
+  "column_break_4",
+  "expected_start_date",
+  "expected_end_date",
+  "project_manager",
+  "project_location",
+  "complain_mechanism_details_section",
+  "date_of_complain",
+  "complain_mechanism_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "complain_mechanism_details_section",
+   "fieldtype": "Section Break",
+   "label": "Complain Mechanism Details"
+  },
+  {
+   "fieldname": "date_of_complain",
+   "fieldtype": "Datetime",
+   "label": "Date of Complain"
+  },
+  {
+   "fieldname": "complain_mechanism_details",
+   "fieldtype": "Table",
+   "label": "Complain Mechanism Details",
+   "options": "Complain Mechanism Details"
+  }
+ ],
+ "modified": "2020-08-15 10:57:11.267397",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Complain Mechanism",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

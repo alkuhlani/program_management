@@ -1,0 +1,256 @@
+{
+ "autoname": "field:indicator",
+ "creation": "2020-08-10 00:00:18.617756",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project_proposal",
+  "indicator",
+  "column_break_3",
+  "remaining",
+  "cumulative_progress",
+  "in_progress",
+  "section_break_5",
+  "indicator_log_detail",
+  "section_break_6",
+  "total_men",
+  "column_break_12",
+  "total_women",
+  "column_break_14",
+  "total_boys",
+  "column_break_16",
+  "total_girls",
+  "column_break_18",
+  "total_unclassified",
+  "column_break_20",
+  "total",
+  "achieved_indicators_section",
+  "achieved_indicators",
+  "section_break_19",
+  "achieved_men",
+  "column_break_21",
+  "achieved_women",
+  "column_break_23",
+  "achieved_boys",
+  "column_break_25",
+  "achieved_girls",
+  "column_break_27",
+  "achieved_unclassified",
+  "column_break_29",
+  "total_achieved"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Proposal",
+   "options": "Project Proposal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Link",
+   "label": "Indicator",
+   "options": "Indicators",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break",
+   "label": "Targeted Indicators"
+  },
+  {
+   "fetch_from": "indicator.total_men",
+   "fieldname": "total_men",
+   "fieldtype": "Int",
+   "label": "Total Men",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator.total_women",
+   "fieldname": "total_women",
+   "fieldtype": "Int",
+   "label": "Total Women",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator.total_boys",
+   "fieldname": "total_boys",
+   "fieldtype": "Int",
+   "label": "Total Boys",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator.total_girls",
+   "fieldname": "total_girls",
+   "fieldtype": "Int",
+   "label": "Total Girls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator.total_unclassified",
+   "fieldname": "total_unclassified",
+   "fieldtype": "Int",
+   "label": "Total Unclassified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator.total",
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indicator_log_detail",
+   "fieldtype": "Table",
+   "label": "Indicator Log Detail",
+   "options": "Indicator Log Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "achieved_indicators_section",
+   "fieldtype": "Section Break",
+   "label": "Achieved Indicators"
+  },
+  {
+   "fieldname": "achieved_indicators",
+   "fieldtype": "Table",
+   "label": "Achieved Indicators",
+   "options": "Achieved Indicators"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "achieved_men",
+   "fieldtype": "Int",
+   "label": "Achieved Men",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achieved_women",
+   "fieldtype": "Int",
+   "label": "Achieved Women",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achieved_boys",
+   "fieldtype": "Int",
+   "label": "Achieved Boys",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achieved_girls",
+   "fieldtype": "Int",
+   "label": "Achieved Girls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "achieved_unclassified",
+   "fieldtype": "Int",
+   "label": "Achieved Unclassified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_achieved",
+   "fieldtype": "Int",
+   "label": "Total Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cumulative_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Cumulative Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "in_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "In Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining",
+   "fieldtype": "Int",
+   "label": "Remaining",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-08-10 02:50:58.464906",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Indicator Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

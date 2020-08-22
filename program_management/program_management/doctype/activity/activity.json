@@ -1,0 +1,104 @@
+{
+ "autoname": "format:{code} Activity-{output}",
+ "creation": "2020-07-20 00:59:36.347861",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "code",
+  "activity",
+  "description",
+  "column_break_3",
+  "project_proposal",
+  "linked_with",
+  "output",
+  "section_break_5",
+  "assumption"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "ACT-.YYYY.-####"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "output",
+   "fieldtype": "Link",
+   "label": "Objective/Outcome/Output",
+   "options": "Outcome and Output"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assumption",
+   "fieldtype": "Text Editor",
+   "label": "Assumption"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Proposal",
+   "options": "Project Proposal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_with",
+   "fieldtype": "Select",
+   "label": "Linked With",
+   "options": "Objective\nOutcome\nOutput"
+  }
+ ],
+ "modified": "2020-07-26 01:49:37.098201",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Activity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

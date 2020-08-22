@@ -13,8 +13,13 @@ from frappe.model.mapper import get_mapped_doc
 from frappe.utils import add_days, cstr, date_diff, get_link_to_form, getdate, today, flt
 from frappe.utils.nestedset import NestedSet
 
+class CircularReferenceError(frappe.ValidationError): pass
+class EndDateCannotBeGreaterThanProjectEndDateError(frappe.ValidationError): pass
+
+
 class Logframe(NestedSet):
-	pass
+	nsm_parent_field = 'parent_logical_framework_chart'
+
 
 
 @frappe.whitelist()
@@ -51,7 +56,7 @@ def add_node():
 	})
 	args = make_tree_args(**args)
 
-	if args.parent_logical_framework_chart == 'All Logframe' or args.parent_logical_framework_chart == args.project_proposal:
+	if args.parent_logical_framework_chart == args.project_proposal:
 		args.parent_logical_framework_chart = None
 
 	frappe.get_doc(args).insert()

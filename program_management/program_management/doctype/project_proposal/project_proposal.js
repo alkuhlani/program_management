@@ -2,6 +2,20 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Project Proposal', {
+    refresh(frm) {
+		if (frm.doc.docstatus==0){
+			frm.add_custom_button(__("Project"),
+				() => frm.events.make_project(frm), __('Create'));
+		}		
+	},
+	make_project: function(frm) {
+		frappe.route_options = {"project_proposal": frm.doc.name,
+			"project_name": frm.doc.project_no,
+			"estimated_costing": frm.doc.budget}
+		frappe.set_route("Form", 'Project', 'New Project 1');
+
+	},
+
     validate: function(frm) {
         frm.trigger("calculate_duration")
     },

@@ -1,0 +1,36 @@
+{
+ "creation": "2020-08-12 18:34:21.025164",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "recommendations_of_the_previous_visit",
+  "do_it_or_not"
+ ],
+ "fields": [
+  {
+   "fieldname": "recommendations_of_the_previous_visit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recommendations of the previous visit"
+  },
+  {
+   "fieldname": "do_it_or_not",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Do it or Not",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-15 10:57:10.081589",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Recommendations of the Previous Visit",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

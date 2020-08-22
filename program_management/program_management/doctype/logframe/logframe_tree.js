@@ -30,7 +30,7 @@ frappe.treeview_settings['Logframe'] = {
 	],
 	breadcrumb: "Project Proposals",
 	get_tree_root: false,
-	root_label: "All Logframe",
+	root_label: "All Logframes",
 	ignore_fields: ["parent_logical_framework_chart"],
 	onload: function(me) {
 		frappe.treeview_settings['Logframe'].page = {};

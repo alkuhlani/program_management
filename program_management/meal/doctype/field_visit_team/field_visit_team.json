@@ -1,0 +1,36 @@
+{
+ "creation": "2020-08-12 18:50:11.010977",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "position"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Position"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-15 10:57:10.872011",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Team",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

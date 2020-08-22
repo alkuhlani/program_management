@@ -1,0 +1,82 @@
+{
+ "creation": "2020-08-15 11:36:36.416485",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "level_of_results_type",
+  "level_of_results",
+  "indicators",
+  "source_of_verification",
+  "column_break_5",
+  "method_of_data_collection",
+  "responsible",
+  "frequency"
+ ],
+ "fields": [
+  {
+   "fieldname": "level_of_results_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Level of Results Type",
+   "options": "Level of Results"
+  },
+  {
+   "fieldname": "level_of_results",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Level of Results"
+  },
+  {
+   "fieldname": "indicators",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Indicators",
+   "options": "Indicator Log"
+  },
+  {
+   "fieldname": "source_of_verification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source of Verification",
+   "options": "Means of Verification"
+  },
+  {
+   "fieldname": "method_of_data_collection",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Method of Data Collection",
+   "options": "Method of Data Collection"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Responsible",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-18 18:38:41.992624",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "MEAL Plan Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

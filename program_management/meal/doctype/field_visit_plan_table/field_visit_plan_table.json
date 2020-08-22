@@ -1,0 +1,58 @@
+{
+ "creation": "2020-08-12 18:47:29.240700",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "\u0627\u0644\u0645\u062f\u064a\u0631\u064a\u0629",
+  "the_name_of_the_site_providing_the_service_to_be_visited",
+  "the_number_of_sites_planned_to_be_visited_per_day",
+  "the_actual_date_of_accessing_the_site"
+ ],
+ "fields": [
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "\u0635\u0646\u0639\u0627\u0621\n\u0639\u062f\u0646\n\u0627\u0628"
+  },
+  {
+   "fieldname": "\u0627\u0644\u0645\u062f\u064a\u0631\u064a\u0629",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "\u0627\u0644\u0645\u062f\u064a\u0631\u064a\u0629",
+   "options": "\u0645\u062f\u064a\u0631\u064a\u0629 \u0627\u0644\u062b\u0648\u0631\u0629\n\u0645\u062f\u064a\u0631\u064a\u0629 \u0645\u0639\u064a\u0646"
+  },
+  {
+   "fieldname": "the_name_of_the_site_providing_the_service_to_be_visited",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "The name of the site providing the service to be visited"
+  },
+  {
+   "fieldname": "the_number_of_sites_planned_to_be_visited_per_day",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "The number of sites planned to be visited per day"
+  },
+  {
+   "fieldname": "the_actual_date_of_accessing_the_site",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "The actual date of accessing the site"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-15 10:57:10.466951",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Plan Table",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

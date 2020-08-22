@@ -1,0 +1,66 @@
+{
+ "autoname": "format:WP-{project_proposal}",
+ "creation": "2020-07-20 02:09:57.653960",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_proposal",
+  "get_activity",
+  "section_break_3",
+  "work_plan_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "label": "Project Proposal",
+   "options": "Project Proposal"
+  },
+  {
+   "fieldname": "get_activity",
+   "fieldtype": "Button",
+   "label": "Get Activity"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_plan_details",
+   "fieldtype": "Table",
+   "label": "Work Plan Details",
+   "options": "Work Plan Details"
+  }
+ ],
+ "modified": "2020-07-23 09:12:38.677323",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Work Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

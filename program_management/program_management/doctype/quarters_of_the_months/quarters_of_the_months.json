@@ -1,0 +1,37 @@
+{
+ "creation": "2020-08-18 18:47:19.216428",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "check_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_2",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Check"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-18 23:35:39.939798",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Quarters of the Months",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

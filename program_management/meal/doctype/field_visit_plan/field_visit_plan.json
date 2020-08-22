@@ -1,0 +1,335 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-08-12 18:55:42.545316",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "plan_type",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "column_breack_6",
+  "project_manager",
+  "project_location",
+  "expected_start_date",
+  "expected_end_date",
+  "before_visit_section",
+  "recommendations_of_the_previous_visit",
+  "section_break_5",
+  "type_of_visit__assignment",
+  "column_break_7",
+  "actual_date_of_the_visit",
+  "column_break_18",
+  "date_of_visit",
+  "column_break_9",
+  "date_of_preparing_the_plan",
+  "section_break_11",
+  "field_visit_plan_details",
+  "section_break_13",
+  "general_goal",
+  "column_break_15",
+  "sub_goals",
+  "column_break_17",
+  "the_methods_used_to_achieve_the_goals_of_the_visit",
+  "section_break_19",
+  "field_visit_team",
+  "section_break_23",
+  "section_break_24",
+  "goals_achieved_during_the_visit",
+  "column_break_26",
+  "goals_not_achieved_during_the_visit",
+  "column_break_28",
+  "reasons_for_not_achieving_goals",
+  "section_break_30",
+  "notes",
+  "column_break_32",
+  "current_visit_recommendations",
+  "suggested_solutions_to_improve_performance_section",
+  "suggested_solutions_for_field_visit",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "FVP-M&E-.YYYY.-"
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Type",
+   "options": "\nBefore Visit\nAfter Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.plan_type=='Before Visit'",
+   "fieldname": "before_visit_section",
+   "fieldtype": "Section Break",
+   "label": "Before Visit"
+  },
+  {
+   "fieldname": "recommendations_of_the_previous_visit",
+   "fieldtype": "Table",
+   "label": "Recommendations of the Previous Visit",
+   "options": "Recommendations of the Previous Visit"
+  },
+  {
+   "depends_on": "eval:doc.plan_type=='Before Visit'",
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_visit__assignment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Visit / Assignment",
+   "options": "\nFollow-up & Supervision Visit - (Technical or Support)\nFollow-up and evaluation visit\nOther visits",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_date_of_the_visit",
+   "fieldtype": "Date",
+   "label": "Actual Date of the Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_preparing_the_plan",
+   "fieldtype": "Date",
+   "label": "Date of Preparing the Plan"
+  },
+  {
+   "depends_on": "eval:doc.plan_type=='Before Visit'",
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "field_visit_plan_details",
+   "fieldtype": "Table",
+   "label": "Field Visit Plan Details",
+   "options": "Field Visit Plan Table"
+  },
+  {
+   "depends_on": "eval:doc.plan_type=='Before Visit'",
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "general_goal",
+   "fieldtype": "Small Text",
+   "label": "General Goal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_goals",
+   "fieldtype": "Small Text",
+   "label": "Sub-Goals"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "the_methods_used_to_achieve_the_goals_of_the_visit",
+   "fieldtype": "Small Text",
+   "label": "The methods used to achieve the goals of the visit"
+  },
+  {
+   "depends_on": "eval:doc.plan_type=='Before Visit'",
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "field_visit_team",
+   "fieldtype": "Table",
+   "label": "Field Visit Team",
+   "options": "Field Visit Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.plan_type=='After Visit'",
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Goals of Visit"
+  },
+  {
+   "fieldname": "goals_achieved_during_the_visit",
+   "fieldtype": "Small Text",
+   "label": "Goals Achieved During the Visit"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "goals_not_achieved_during_the_visit",
+   "fieldtype": "Small Text",
+   "label": "Goals not Achieved During the Visit"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reasons_for_not_achieving_goals",
+   "fieldtype": "Small Text",
+   "label": "Reasons for Not Achieving Goals"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.plan_type=='After Visit'",
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Notes and Recommendations"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_visit_recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Current Visit Recommendations"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.plan_type=='After Visit'",
+   "fieldname": "suggested_solutions_to_improve_performance_section",
+   "fieldtype": "Section Break",
+   "label": "Suggested Solutions to Improve Performance"
+  },
+  {
+   "fieldname": "suggested_solutions_for_field_visit",
+   "fieldtype": "Table",
+   "label": "Suggested Solutions for Field Visit",
+   "options": "Suggested Solutions for Field Visit"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Field Visit Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Date",
+   "label": "Date of Visit",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-08-15 11:46:46.922152",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Plan",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

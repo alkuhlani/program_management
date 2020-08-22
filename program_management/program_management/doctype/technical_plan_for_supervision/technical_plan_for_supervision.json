@@ -1,0 +1,216 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-08-15 00:47:51.235228",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_2",
+  "naming_series",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "column_breack_6",
+  "project_manager",
+  "project_location",
+  "expected_start_date",
+  "expected_end_date",
+  "plan_details_section",
+  "type_of_visit",
+  "visit_objective",
+  "responsible",
+  "period_of_visit",
+  "section_break_17",
+  "visit_tool",
+  "other_visit_tool",
+  "frequency",
+  "output_of_visit",
+  "section_break_22",
+  "quarters_of_the_months",
+  "comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TP-SUP-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "type_of_visit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Visit",
+   "options": "\nThe supervisory evaluation visit\nRoutine supervisory visit\nThe supervisory training visit\nThe periodic supervisory visit from the Directorate\nThe supervisory visit from the Governorate\nThe supervisory visit from the General Administration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_objective",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visit Objective",
+   "options": "\nHealth facility assessment prior to intervention\nEvaluate the performance level of the facility and health teams\nTraining employees and developing their skills\nPeriodic evaluation of the disease staff and facilities\nMonitor the implementation level of activities in health facilities\nMonitor the progress of project activities\nPeriodic evaluation of the level of performance according to indicators",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_of_visit",
+   "fieldtype": "Data",
+   "label": "Period of Visit"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_tool",
+   "fieldtype": "Select",
+   "label": "Visit Tool",
+   "options": "\nEvaluation Form\nSupervision Form\nAssertions\nOther"
+  },
+  {
+   "depends_on": "eval:doc.visit_tool==\"Other\"",
+   "fieldname": "other_visit_tool",
+   "fieldtype": "Data",
+   "label": "Other Visit Tool"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "output_of_visit",
+   "fieldtype": "Select",
+   "label": "Output of Visit",
+   "options": "\nEvaluation report\nSupervision report\nTraining report\nSupervision form\nFinal report"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Technical Plan for Supervision",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "quarters_of_the_months",
+   "fieldtype": "Table",
+   "label": "Quarters of the Months",
+   "options": "Quarters of the Months"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-08-18 19:02:23.689716",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Technical Plan for Supervision",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

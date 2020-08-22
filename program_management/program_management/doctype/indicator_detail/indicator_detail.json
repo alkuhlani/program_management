@@ -1,0 +1,164 @@
+{
+ "creation": "2020-07-20 00:42:36.078043",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "column_break_2",
+  "district",
+  "column_break_4",
+  "category",
+  "column_break_6",
+  "type",
+  "column_break_8",
+  "age_group",
+  "section_break_8",
+  "men",
+  "column_break_10",
+  "women",
+  "column_break_12",
+  "boys",
+  "column_break_14",
+  "girls",
+  "column_break_16",
+  "unclassified",
+  "column_break_18",
+  "total",
+  "section_break_20",
+  "verification_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Beneficiaries Category"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "men",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Men"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "women",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Women"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "boys",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Boys"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "girls",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Girls"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "unclassified",
+   "fieldtype": "Int",
+   "label": "Unclassified"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "verification_method",
+   "fieldtype": "Link",
+   "label": "Means of Verification",
+   "options": "Means of Verification"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Beneficiaries Type"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Link",
+   "label": "Age Group",
+   "options": "Age Group"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-07-26 01:32:58.699037",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Indicator Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

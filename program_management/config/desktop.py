@@ -4,11 +4,21 @@ from frappe import _
 
 def get_data():
 	return [
-		{
+		
+                {
 			"module_name": "Program Management",
 			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"icon": "fa fa-product-hunt",
 			"type": "module",
 			"label": _("Program Management")
+		},
+                {
+			"module_name": "MEAL",
+			"color": "grey",
+			"icon": "fa fa-bar-chart",
+			"type": "module",
+			"label": _("MEAL")
 		}
+
+
 	]
