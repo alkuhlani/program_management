@@ -231,7 +231,7 @@
    "read_only": 1
   }
  ],
- "modified": "2020-08-10 02:50:58.464906",
+ "modified": "2020-09-20 08:45:36.394602",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Indicator Log",
@@ -246,6 +246,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
    "share": 1,
    "write": 1
   }

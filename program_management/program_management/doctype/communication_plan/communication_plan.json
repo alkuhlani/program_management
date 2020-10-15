@@ -96,7 +96,7 @@
    "options": "CP-.YYYY.-"
   }
  ],
- "modified": "2020-07-19 23:55:31.595067",
+ "modified": "2020-09-20 08:42:17.997142",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Communication Plan",
@@ -111,6 +111,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
    "share": 1,
    "write": 1
   }

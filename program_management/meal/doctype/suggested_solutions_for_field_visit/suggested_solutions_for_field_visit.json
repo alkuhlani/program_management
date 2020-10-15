@@ -26,17 +26,19 @@
   {
    "fieldname": "time_period",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Time Period"
   },
   {
    "fieldname": "responsible_for_follow_up_and_verification_of_implementation",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Responsible for Follow-up and Verification of Implementation",
    "options": "Employee"
   }
  ],
  "istable": 1,
- "modified": "2020-08-15 10:57:09.693603",
+ "modified": "2020-10-11 12:02:46.558910",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Suggested Solutions for Field Visit",

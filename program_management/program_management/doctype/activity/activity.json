@@ -13,6 +13,7 @@
   "project_proposal",
   "linked_with",
   "output",
+  "indicator",
   "section_break_5",
   "assumption"
  ],
@@ -37,6 +38,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.linked_with!=\"Indicator\"",
    "fieldname": "output",
    "fieldtype": "Link",
    "label": "Objective/Outcome/Output",
@@ -75,10 +77,17 @@
    "fieldname": "linked_with",
    "fieldtype": "Select",
    "label": "Linked With",
-   "options": "Objective\nOutcome\nOutput"
+   "options": "Objective\nOutcome\nOutput\nIndicator"
+  },
+  {
+   "depends_on": "eval:doc.linked_with==\"Indicator\"",
+   "fieldname": "indicator",
+   "fieldtype": "Link",
+   "label": "Indicator",
+   "options": "Indicators"
   }
  ],
- "modified": "2020-07-26 01:49:37.098201",
+ "modified": "2020-10-07 11:38:50.020439",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Activity",
@@ -93,6 +102,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
    "share": 1,
    "write": 1
   }
