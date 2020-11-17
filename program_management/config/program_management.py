@@ -79,9 +79,25 @@ def get_data():
 					"name": "Communication Plan",
 					"description": _("Communication Plan.")
 				},
+				{
+					"type": "doctype",
+					"name": "Technical Plan for Supervision",
+					
+				},
 				
 
 			]
+		},
+
+		{
+			"label": _("Reports"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "Monthly Report",
+					"description": _("Monthly Reports for Projects"),
+				},
+				]
 		},
 
                 {

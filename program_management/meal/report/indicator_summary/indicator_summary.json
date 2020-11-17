@@ -1,0 +1,35 @@
+{
+ "add_total_row": 0,
+ "creation": "2020-11-03 20:27:49.297761",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "BFD 01",
+ "modified": "2020-11-04 00:23:03.531299",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Indicator Summary",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "Select\r\n    ai.parent as  \"Indicator:Link/Indicator Log:250\",\r\n    ai.governorate as \"Governorate:Data:150\",\r\n    ti.total as \"Total Target:Int:120\",\r\n    ai.total as \"Total Achieved:Int:120\",\r\n    (ti.total - ai.total) as \"Remaining:Int:120\",\r\n    (ai.total/ti.total*100) as \"Progress:Percent:120\"\r\nfrom\r\n    `tabIndicator Log Detail` ti , `tabAchieved Indicators` ai\r\nwhere\r\n    ti.parent=ai.parent\r\n    and ti.governorate = ai.governorate and ai.total<= ti.total\r\ngroup by ai.governorate",
+ "ref_doctype": "Indicator Log",
+ "report_name": "Indicator Summary",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Projects User"
+  },
+  {
+   "role": "Projects Manager"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "MEAL Officer"
+  }
+ ]
+}

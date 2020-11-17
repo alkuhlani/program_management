@@ -1,0 +1,86 @@
+{
+ "creation": "2020-11-10 10:43:46.817844",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "district",
+  "column_break_3",
+  "date",
+  "name_of_the_target",
+  "column_break_7",
+  "type_of_supply",
+  "no_of_supply",
+  "section_break_9",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "name_of_the_target",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of the Target"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_supply",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Supply"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  },
+  {
+   "fieldname": "no_of_supply",
+   "fieldtype": "Data",
+   "label": "No. of Supply"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-14 22:50:43.232296",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Supply Distribution Updates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

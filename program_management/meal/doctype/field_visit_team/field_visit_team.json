@@ -4,26 +4,36 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
+  "employee",
+  "employee_name",
   "position"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Name",
-   "options": "Employee"
-  },
   {
    "fieldname": "position",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Position"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
   }
  ],
  "istable": 1,
- "modified": "2020-08-15 10:57:10.872011",
+ "modified": "2020-11-15 13:30:39.035893",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Field Visit Team",

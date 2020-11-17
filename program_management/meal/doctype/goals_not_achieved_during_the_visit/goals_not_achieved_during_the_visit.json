@@ -1,0 +1,35 @@
+{
+ "creation": "2020-10-21 10:20:34.354740",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goals_not_achieved_during_the_visit",
+  "reasons_for_not_achieving_goals"
+ ],
+ "fields": [
+  {
+   "fieldname": "goals_not_achieved_during_the_visit",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Goals not Achieved During the Visit"
+  },
+  {
+   "fieldname": "reasons_for_not_achieving_goals",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Reasons for Not Achieving Goals"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-21 10:20:34.354740",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Goals not Achieved During the Visit",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

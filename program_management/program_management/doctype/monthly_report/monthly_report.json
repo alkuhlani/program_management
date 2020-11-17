@@ -1,0 +1,249 @@
+{
+ "allow_rename": 1,
+ "autoname": "format:{monthly_report}-{MM}-{YYYY}",
+ "creation": "2020-11-10 10:50:16.234329",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reporting_date",
+  "column_break_2",
+  "monthly_report",
+  "section_break_9",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "sector",
+  "column_breack_6",
+  "project_manager",
+  "project_location",
+  "expected_start_date",
+  "expected_end_date",
+  "section_break_24",
+  "activities_updates",
+  "supply_distribution_updates_details_section",
+  "supply_distribution_updates",
+  "section_break_19",
+  "monitoring_visits_updates",
+  "indicators_update_details_section",
+  "indicators_update",
+  "challenges_update_details_section",
+  "challenges_update",
+  "activities_priorities_for_next_month_details_section",
+  "activities_priorities_for_next_month",
+  "section_break_21",
+  "attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reporting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Reporting Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "monthly_report",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Monthly Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Activities Updates Details"
+  },
+  {
+   "fieldname": "activities_updates",
+   "fieldtype": "Table",
+   "label": "Activities Updates",
+   "options": "Activities Updates"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "supply_distribution_updates_details_section",
+   "fieldtype": "Section Break",
+   "label": "Supply Distribution Updates Details"
+  },
+  {
+   "fieldname": "supply_distribution_updates",
+   "fieldtype": "Table",
+   "label": "Supply Distribution Updates",
+   "options": "Supply Distribution Updates"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Monitoring Visits Updates Details"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
+  },
+  {
+   "fieldname": "monitoring_visits_updates",
+   "fieldtype": "Table",
+   "label": "Monitoring Visits Updates",
+   "options": "Monitoring Visits Updates"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "challenges_update_details_section",
+   "fieldtype": "Section Break",
+   "label": "Challenges Update Details"
+  },
+  {
+   "fieldname": "challenges_update",
+   "fieldtype": "Table",
+   "label": "Challenges Update",
+   "options": "Challenges Update"
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "activities_priorities_for_next_month_details_section",
+   "fieldtype": "Section Break",
+   "label": "Activities Priorities for Next Month Details"
+  },
+  {
+   "fieldname": "activities_priorities_for_next_month",
+   "fieldtype": "Table",
+   "label": "Activities Priorities for Next Month",
+   "options": "Activities Priorities for Next Month"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Monthly Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.reporting_date",
+   "fieldname": "indicators_update_details_section",
+   "fieldtype": "Section Break",
+   "label": "Indicators Update Details"
+  },
+  {
+   "fieldname": "indicators_update",
+   "fieldtype": "Table",
+   "label": "Indicators Update",
+   "options": "Indicator Log Monthly Report"
+  },
+  {
+   "fetch_from": "project.cluster",
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-11-15 19:02:07.966808",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Monthly Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "monthly_report",
+ "track_changes": 1
+}

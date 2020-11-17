@@ -1,0 +1,28 @@
+{
+ "creation": "2020-10-21 10:18:44.588393",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "goals_achieved_during_the_visit"
+ ],
+ "fields": [
+  {
+   "fieldname": "goals_achieved_during_the_visit",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Goals Achieved During the Visit"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-21 10:18:44.588393",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Goals Achieved During the Visit",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

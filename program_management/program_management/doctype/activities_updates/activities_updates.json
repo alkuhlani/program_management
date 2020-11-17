@@ -1,0 +1,99 @@
+{
+ "creation": "2020-11-10 10:40:28.185624",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "governorates",
+  "date",
+  "no_of_beneficiaries",
+  "brief_description_of_the_activity",
+  "column_break_3",
+  "district",
+  "districts",
+  "type_of_activity",
+  "notes"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "columns": 1,
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "type_of_activity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Activity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_beneficiaries",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Beneficiaries"
+  },
+  {
+   "columns": 2,
+   "fieldname": "brief_description_of_the_activity",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Brief Description of the Activity"
+  },
+  {
+   "columns": 2,
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  },
+  {
+   "fieldname": "governorates",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Governorates",
+   "options": "Governorates"
+  },
+  {
+   "fieldname": "districts",
+   "fieldtype": "Table MultiSelect",
+   "hidden": 1,
+   "label": "Districts",
+   "options": "Districts"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-15 18:05:31.317057",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Activities Updates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

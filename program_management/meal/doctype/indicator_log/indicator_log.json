@@ -7,6 +7,7 @@
  "field_order": [
   "project_proposal",
   "indicator",
+  "indicator_subject",
   "column_break_3",
   "remaining",
   "cumulative_progress",
@@ -45,6 +46,7 @@
    "fieldname": "project_proposal",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project Proposal",
    "options": "Project Proposal",
    "reqd": 1
@@ -229,9 +231,16 @@
    "fieldtype": "Int",
    "label": "Remaining",
    "read_only": 1
+  },
+  {
+   "fetch_from": "indicator.indicator",
+   "fieldname": "indicator_subject",
+   "fieldtype": "Small Text",
+   "label": "Indicator Subject",
+   "read_only": 1
   }
  ],
- "modified": "2020-09-20 08:45:36.394602",
+ "modified": "2020-11-03 14:14:49.571160",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Indicator Log",

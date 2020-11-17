@@ -1,0 +1,176 @@
+{
+ "creation": "2020-11-12 09:49:21.969261",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "indicator_log",
+  "column_break_2",
+  "indicator_subject",
+  "section_break_4",
+  "remaining",
+  "column_break_6",
+  "cumulative_progress",
+  "column_break_8",
+  "in_progress",
+  "section_break_10",
+  "achieved_men",
+  "column_break_12",
+  "achieved_women",
+  "column_break_14",
+  "achieved_boys",
+  "column_break_16",
+  "achieved_girls",
+  "column_break_18",
+  "achieved_unclassified",
+  "column_break_20",
+  "total_achieved",
+  "section_break_22",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "indicator_log",
+   "fieldtype": "Link",
+   "label": "Indicator Log",
+   "options": "Indicator Log"
+  },
+  {
+   "fetch_from": "indicator_log.achieved_men",
+   "fieldname": "achieved_men",
+   "fieldtype": "Data",
+   "label": "Achieved Men",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator_log.achieved_women",
+   "fieldname": "achieved_women",
+   "fieldtype": "Data",
+   "label": "Achieved Women",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator_log.achieved_boys",
+   "fieldname": "achieved_boys",
+   "fieldtype": "Data",
+   "label": "Achieved Boys",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator_log.achieved_girls",
+   "fieldname": "achieved_girls",
+   "fieldtype": "Data",
+   "label": "Achieved Girls",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator_log.achieved_unclassified",
+   "fieldname": "achieved_unclassified",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Achieved Unclassified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator_log.total_achieved",
+   "fieldname": "total_achieved",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total Achieved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "indicator_log.indicator_subject",
+   "fieldname": "indicator_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indicator Subject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "indicator_log.remaining",
+   "fieldname": "remaining",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remaining",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator_log.cumulative_progress",
+   "fieldname": "cumulative_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Cumulative Progress",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator_log.in_progress",
+   "fieldname": "in_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "In Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.indicator_log",
+   "fieldname": "comments",
+   "fieldtype": "Long Text",
+   "label": "Comments"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-14 22:34:55.774336",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Indicator Log Monthly Report",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

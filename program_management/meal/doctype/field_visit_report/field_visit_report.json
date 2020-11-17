@@ -1,14 +1,14 @@
 {
- "autoname": "field:field_visit_report_title",
+ "autoname": "naming_series:",
  "creation": "2020-10-12 00:18:41.691333",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "field_visit_report_title",
-  "field_visit_plan",
   "column_break_2",
   "naming_series",
+  "field_visit_plan",
   "section_break_9",
   "project",
   "project_name",
@@ -28,13 +28,13 @@
   "section_break_47",
   "visit_report_details",
   "section_break_24",
+  "general_goal",
+  "achieved_goals_section",
   "goals_achieved_during_the_visit",
   "column_break_26",
   "goals_not_achieved_during_the_visit",
-  "column_break_28",
-  "reasons_for_not_achieving_goals",
   "section_break_30",
-  "notes",
+  "positive_notes",
   "column_break_32",
   "negative_notes",
   "column_break_47",
@@ -49,7 +49,6 @@
   {
    "fieldname": "field_visit_report_title",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Field Visit Report Title",
    "reqd": 1,
    "unique": 1
@@ -61,20 +60,13 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Series",
-   "options": "FVR-M&E-.YYYY.-"
+   "options": "FVR-MEAL-.YYYY.-"
   },
   {
    "fieldname": "section_break_9",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "project",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Project",
-   "options": "Project",
-   "reqd": 1
   },
   {
    "fetch_from": "project.project_name",
@@ -152,15 +144,15 @@
    "reqd": 1
   },
   {
-   "collapsible": 1,
    "fieldname": "section_break_24",
    "fieldtype": "Section Break",
-   "label": "Goals Details"
+   "label": "Planed Goals"
   },
   {
    "fieldname": "goals_achieved_during_the_visit",
-   "fieldtype": "Small Text",
-   "label": "Goals Achieved During the Visit"
+   "fieldtype": "Table",
+   "label": "Goals Achieved During the Visit",
+   "options": "Goals Achieved During the Visit"
   },
   {
    "fieldname": "column_break_26",
@@ -168,28 +160,15 @@
   },
   {
    "fieldname": "goals_not_achieved_during_the_visit",
-   "fieldtype": "Small Text",
-   "label": "Goals not Achieved During the Visit"
-  },
-  {
-   "fieldname": "column_break_28",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "reasons_for_not_achieving_goals",
-   "fieldtype": "Small Text",
-   "label": "Reasons for Not Achieving Goals"
+   "fieldtype": "Table",
+   "label": "Goals not Achieved During the Visit",
+   "options": "Goals not Achieved During the Visit"
   },
   {
    "collapsible": 1,
    "fieldname": "section_break_30",
    "fieldtype": "Section Break",
    "label": "Notes and Recommendations"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Positive Notes"
   },
   {
    "fieldname": "column_break_32",
@@ -217,7 +196,7 @@
    "fieldname": "visit_report_details",
    "fieldtype": "Table",
    "label": "Visit Report Details",
-   "options": "Field Visit Plan Table"
+   "options": "Field Visit Report Table"
   },
   {
    "collapsible": 1,
@@ -232,6 +211,7 @@
    "options": "Suggested Solutions for Field Visit"
   },
   {
+   "collapsible": 1,
    "fieldname": "attachments_details_section",
    "fieldtype": "Section Break",
    "label": "Attachments Details"
@@ -255,8 +235,7 @@
    "fieldname": "field_visit_plan",
    "fieldtype": "Link",
    "label": "Field Visit Plan",
-   "options": "Field Visit Plan",
-   "read_only": 1
+   "options": "Field Visit Plan"
   },
   {
    "fetch_from": "field_visit_plan.date_of_preparing_the_plan",
@@ -268,10 +247,36 @@
   {
    "fieldname": "column_break_17",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "field_visit_plan.general_goal",
+   "fieldname": "general_goal",
+   "fieldtype": "Long Text",
+   "label": "General Goal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "achieved_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Achieved Goals"
+  },
+  {
+   "fieldname": "positive_notes",
+   "fieldtype": "Small Text",
+   "label": "Positive Notes"
+  },
+  {
+   "fetch_from": "field_visit_plan.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-10-12 01:39:53.887227",
+ "modified": "2020-11-01 21:16:33.899825",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Field Visit Report",
@@ -307,5 +312,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "field_visit_report_title",
  "track_changes": 1
 }

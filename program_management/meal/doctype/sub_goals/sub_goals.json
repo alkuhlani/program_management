@@ -1,0 +1,28 @@
+{
+ "creation": "2020-10-19 11:55:30.916495",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sub_goal"
+ ],
+ "fields": [
+  {
+   "fieldname": "sub_goal",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Sub-Goals"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-19 20:33:41.412786",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Sub Goals",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

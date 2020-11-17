@@ -1,0 +1,87 @@
+{
+ "creation": "2020-11-10 10:55:01.237246",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "district",
+  "visit_obj_scope",
+  "column_break_3",
+  "date",
+  "name_of_the_target",
+  "brief_description_of_visit_results",
+  "column_break_7",
+  "type_of_visit",
+  "visit_team"
+ ],
+ "fields": [
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "name_of_the_target",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of the Target"
+  },
+  {
+   "fieldname": "visit_obj_scope",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Visit Objective / Scope"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_visit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type of Visit"
+  },
+  {
+   "fieldname": "visit_team",
+   "fieldtype": "Data",
+   "label": "Visit Team"
+  },
+  {
+   "fieldname": "brief_description_of_visit_results",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Brief Description of Visit Results"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-14 22:32:39.520956",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Monitoring Visits Updates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

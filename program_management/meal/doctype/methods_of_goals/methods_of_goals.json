@@ -1,0 +1,28 @@
+{
+ "creation": "2020-10-19 11:57:19.543571",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "methods_used_to_achieve_the_goals_of_the_visit"
+ ],
+ "fields": [
+  {
+   "fieldname": "methods_used_to_achieve_the_goals_of_the_visit",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Methods used to achieve the goals of the visit"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-19 12:04:14.129527",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Methods of Goals",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,6 +1,6 @@
 {
  "allow_rename": 1,
- "autoname": "field:field_visit_plan_title",
+ "autoname": "naming_series:",
  "creation": "2020-08-12 18:55:42.545316",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -32,41 +32,23 @@
   "field_visit_plan_details",
   "section_break_13",
   "general_goal",
-  "column_break_15",
   "sub_goals",
-  "column_break_17",
-  "the_methods_used_to_achieve_the_goals_of_the_visit",
-  "section_break_19",
-  "field_visit_team",
+  "methods_of_goals",
   "section_break_24",
-  "section_visit_report",
-  "goals_achieved_during_the_visit",
-  "column_break_26",
-  "html_40",
-  "goals_not_achieved_during_the_visit",
-  "column_break_28",
-  "html_43",
-  "reasons_for_not_achieving_goals",
-  "section_break_30",
-  "notes",
-  "column_break_32",
-  "negative_notes",
-  "column_break_47",
-  "current_visit_recommendations",
-  "section_break_47",
-  "visit_report_details",
-  "suggested_solutions_to_improve_performance_section",
-  "suggested_solutions_for_field_visit",
-  "attachments_details_section",
   "attachments",
+  "section_break_31",
+  "field_visit_team",
+  "section_break_35",
   "amended_from"
  ],
  "fields": [
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Series",
-   "options": "FVP-M&E-.YYYY.-"
+   "options": "FVP-MEAL-.YYYY.-",
+   "reqd": 1
   },
   {
    "fieldname": "project",
@@ -180,31 +162,15 @@
   },
   {
    "fieldname": "general_goal",
-   "fieldtype": "Small Text",
+   "fieldtype": "Long Text",
    "label": "General Goal",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_15",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "sub_goals",
-   "fieldtype": "Small Text",
-   "label": "Sub-Goals"
-  },
-  {
-   "fieldname": "column_break_17",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "the_methods_used_to_achieve_the_goals_of_the_visit",
-   "fieldtype": "Small Text",
-   "label": "The methods used to achieve the goals of the visit"
-  },
-  {
-   "fieldname": "section_break_19",
-   "fieldtype": "Section Break"
+   "fieldtype": "Table",
+   "label": "Sub Goals",
+   "options": "Sub Goals"
   },
   {
    "fieldname": "field_visit_team",
@@ -214,67 +180,8 @@
    "reqd": 1
   },
   {
-   "collapsible": 1,
    "fieldname": "section_break_24",
-   "fieldtype": "Section Break",
-   "hidden": 1
-  },
-  {
-   "fieldname": "goals_achieved_during_the_visit",
-   "fieldtype": "Small Text",
-   "label": "Goals Achieved During the Visit"
-  },
-  {
-   "fieldname": "column_break_26",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "goals_not_achieved_during_the_visit",
-   "fieldtype": "Small Text",
-   "label": "Goals not Achieved During the Visit"
-  },
-  {
-   "fieldname": "column_break_28",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "reasons_for_not_achieving_goals",
-   "fieldtype": "Small Text",
-   "label": "Reasons for Not Achieving Goals"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "section_break_30",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Notes and Recommendations"
-  },
-  {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Positive Notes"
-  },
-  {
-   "fieldname": "column_break_32",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "current_visit_recommendations",
-   "fieldtype": "Small Text",
-   "label": "Current Visit Recommendations"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "suggested_solutions_to_improve_performance_section",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Suggested Solutions to Improve Performance"
-  },
-  {
-   "fieldname": "suggested_solutions_for_field_visit",
-   "fieldtype": "Table",
-   "label": "Suggested Solutions for Field Visit",
-   "options": "Suggested Solutions for Field Visit"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "amended_from",
@@ -314,45 +221,18 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_visit_report",
-   "fieldtype": "Heading",
-   "label": "Visit Report"
-  },
-  {
-   "fieldname": "section_break_47",
-   "fieldtype": "Section Break",
-   "hidden": 1
-  },
-  {
-   "fieldname": "visit_report_details",
+   "fieldname": "methods_of_goals",
    "fieldtype": "Table",
-   "label": "Visit Report Details",
-   "options": "Field Visit Plan Table"
+   "label": "Methods of Goals",
+   "options": "Methods of Goals"
   },
   {
-   "fieldname": "negative_notes",
-   "fieldtype": "Small Text",
-   "label": "Negative Notes"
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_47",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "html_40",
-   "fieldtype": "HTML",
-   "options": "<br>"
-  },
-  {
-   "fieldname": "html_43",
-   "fieldtype": "HTML",
-   "options": "<br>"
-  },
-  {
-   "depends_on": "eval:doc.visit_report==1",
-   "fieldname": "attachments_details_section",
-   "fieldtype": "Section Break",
-   "label": "Attachments Details"
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "attachments",
@@ -362,7 +242,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-10-12 01:04:09.170486",
+ "modified": "2020-11-01 21:10:19.148538",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Field Visit Plan",
@@ -398,5 +278,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "field_visit_plan_title",
  "track_changes": 1
 }

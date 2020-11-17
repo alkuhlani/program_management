@@ -1,13 +1,15 @@
 {
  "creation": "2020-08-14 23:41:14.831517",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "actions_to_improve_performance_and_work",
   "responsible_for_implementation",
+  "name_of_responsible_for_implementation",
+  "column_break_4",
   "time_period",
-  "responsible_for_follow_up_and_verification_of_implementation"
+  "responsible_for_follow_up_and_verification_of_implementation",
+  "follow_up_responsible"
  ],
  "fields": [
   {
@@ -19,7 +21,6 @@
   {
    "fieldname": "responsible_for_implementation",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Responsible for Implementation",
    "options": "Employee"
   },
@@ -32,13 +33,32 @@
   {
    "fieldname": "responsible_for_follow_up_and_verification_of_implementation",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Responsible for Follow-up and Verification of Implementation",
    "options": "Employee"
+  },
+  {
+   "fetch_from": "responsible_for_implementation.employee_name",
+   "fieldname": "name_of_responsible_for_implementation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Responsible for Implementation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "responsible_for_follow_up_and_verification_of_implementation.employee_name",
+   "fieldname": "follow_up_responsible",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Responsible for Follow up and Verification of Implementation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
   }
  ],
  "istable": 1,
- "modified": "2020-10-11 12:02:46.558910",
+ "modified": "2020-11-01 21:15:42.680841",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Suggested Solutions for Field Visit",

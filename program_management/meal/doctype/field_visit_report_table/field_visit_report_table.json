@@ -1,0 +1,98 @@
+{
+ "creation": "2020-10-19 17:39:55.183009",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "column_break_2",
+  "district",
+  "section_break_3",
+  "the_name_of_the_site_providing_the_service_to_be_visited",
+  "column_break_5",
+  "the_number_of_sites_planned_to_be_visited_per_day",
+  "column_break_7",
+  "the_actual_date_of_accessing_the_site",
+  "section_break_10",
+  "done_or_not",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "the_name_of_the_site_providing_the_service_to_be_visited",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "The name of the site providing the service to be visited"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "the_number_of_sites_planned_to_be_visited_per_day",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "The number of sites planned to be visited per day"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "the_actual_date_of_accessing_the_site",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "The actual date of accessing the site"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "done_or_not",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Done or Not"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description "
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-10-19 20:21:30.665354",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Report Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
