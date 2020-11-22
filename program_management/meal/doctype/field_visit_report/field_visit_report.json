@@ -14,11 +14,13 @@
   "project_name",
   "fund_project_code",
   "donor",
-  "column_breack_6",
-  "project_manager",
   "project_location",
+  "column_breack_6",
   "expected_start_date",
   "expected_end_date",
+  "project_manager",
+  "project_manager_name",
+  "project_manager_email",
   "before_visit_section",
   "date_of_preparing_the_plan",
   "column_break_17",
@@ -94,10 +96,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "project.project_manager",
+   "fetch_from": "field_visit_plan.project_manager",
    "fieldname": "project_manager",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Project Manager",
+   "options": "Employee",
    "read_only": 1
   },
   {
@@ -273,10 +276,25 @@
    "label": "Project",
    "options": "Project",
    "read_only": 1
+  },
+  {
+   "fetch_from": "field_visit_plan.project_manager_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "field_visit_plan.project_manager_email",
+   "fieldname": "project_manager_email",
+   "fieldtype": "Link",
+   "label": "Project Manager Email",
+   "options": "User",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-11-01 21:16:33.899825",
+ "modified": "2020-11-20 23:50:48.044531",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Field Visit Report",

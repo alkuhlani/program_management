@@ -40,6 +40,8 @@
   {
    "fieldname": "project_proposal",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project Proposal",
    "options": "Project Proposal",
    "reqd": 1
@@ -122,7 +124,7 @@
   }
  ],
  "is_tree": 1,
- "modified": "2020-09-20 08:44:00.493760",
+ "modified": "2020-11-22 15:34:56.156090",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Outcome and Output",

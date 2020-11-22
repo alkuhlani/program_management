@@ -10,12 +10,13 @@
   {
    "fieldname": "governorate",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Governorate",
    "options": "Territory"
   }
  ],
  "istable": 1,
- "modified": "2020-11-15 17:09:29.453307",
+ "modified": "2020-11-21 00:39:32.876493",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Governorates",

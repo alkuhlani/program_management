@@ -10,12 +10,13 @@
   {
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "options": "Territory"
   }
  ],
  "istable": 1,
- "modified": "2020-11-15 17:10:43.388280",
+ "modified": "2020-11-21 00:39:30.460594",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Districts",

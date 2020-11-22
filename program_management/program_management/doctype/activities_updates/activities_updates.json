@@ -4,13 +4,11 @@
  "engine": "InnoDB",
  "field_order": [
   "governorate",
-  "governorates",
   "date",
   "no_of_beneficiaries",
   "brief_description_of_the_activity",
   "column_break_3",
   "district",
-  "districts",
   "type_of_activity",
   "notes"
  ],
@@ -69,24 +67,10 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Notes"
-  },
-  {
-   "fieldname": "governorates",
-   "fieldtype": "Table MultiSelect",
-   "hidden": 1,
-   "label": "Governorates",
-   "options": "Governorates"
-  },
-  {
-   "fieldname": "districts",
-   "fieldtype": "Table MultiSelect",
-   "hidden": 1,
-   "label": "Districts",
-   "options": "Districts"
   }
  ],
  "istable": 1,
- "modified": "2020-11-15 18:05:31.317057",
+ "modified": "2020-11-21 00:41:57.742296",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Activities Updates",

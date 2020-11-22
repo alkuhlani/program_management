@@ -1,4 +1,5 @@
 {
+ "allow_rename": 1,
  "autoname": "format:{code} Indicator-{output}",
  "creation": "2020-07-20 00:47:35.911028",
  "doctype": "DocType",
@@ -146,8 +147,8 @@
    "read_only": 1
   }
  ],
- "modified": "2020-08-09 21:33:30.081573",
- "modified_by": "Administrator",
+ "modified": "2020-11-18 01:56:37.066292",
+ "modified_by": "talal.hamati@bfdyemen.org",
  "module": "Program Management",
  "name": "Indicators",
  "owner": "Administrator",
