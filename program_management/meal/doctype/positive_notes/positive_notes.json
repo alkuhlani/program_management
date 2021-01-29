@@ -1,0 +1,42 @@
+{
+ "creation": "2020-12-14 10:30:19.532157",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_site",
+  "column_break_2",
+  "positive_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "positive_notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Positive Notes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_of_site",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "The name of the site providing the service to be visited",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-14 10:33:27.552220",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Positive Notes",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

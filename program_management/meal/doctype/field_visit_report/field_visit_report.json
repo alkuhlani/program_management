@@ -37,10 +37,11 @@
   "goals_not_achieved_during_the_visit",
   "section_break_30",
   "positive_notes",
-  "column_break_32",
+  "html_33",
   "negative_notes",
-  "column_break_47",
+  "html_35",
   "current_visit_recommendations",
+  "section_break_35",
   "suggested_solutions_to_improve_performance_section",
   "suggested_solutions_for_field_visit",
   "attachments_details_section",
@@ -174,22 +175,16 @@
    "label": "Notes and Recommendations"
   },
   {
-   "fieldname": "column_break_32",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "negative_notes",
-   "fieldtype": "Small Text",
-   "label": "Negative Notes"
-  },
-  {
-   "fieldname": "column_break_47",
-   "fieldtype": "Column Break"
+   "fieldtype": "Table",
+   "label": "Negative Notes",
+   "options": "Negative Notes"
   },
   {
    "fieldname": "current_visit_recommendations",
-   "fieldtype": "Small Text",
-   "label": "Current Visit Recommendations"
+   "fieldtype": "Table",
+   "label": "Current Visit Recommendations",
+   "options": "Current Visit Recommendations"
   },
   {
    "fieldname": "section_break_47",
@@ -265,8 +260,9 @@
   },
   {
    "fieldname": "positive_notes",
-   "fieldtype": "Small Text",
-   "label": "Positive Notes"
+   "fieldtype": "Table",
+   "label": "Positive Notes",
+   "options": "Positive Notes"
   },
   {
    "fetch_from": "field_visit_plan.project",
@@ -291,10 +287,24 @@
    "label": "Project Manager Email",
    "options": "User",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_33",
+   "fieldtype": "HTML",
+   "options": "<div class=\"page-break\"></div>"
+  },
+  {
+   "fieldname": "html_35",
+   "fieldtype": "HTML",
+   "options": "<div class=\"page-break\"></div>"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-11-20 23:50:48.044531",
+ "modified": "2020-12-14 10:46:25.814332",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Field Visit Report",

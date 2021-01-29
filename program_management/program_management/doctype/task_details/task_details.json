@@ -1,0 +1,118 @@
+{
+ "creation": "2020-12-07 19:33:48.681414",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_type",
+  "administrative",
+  "technical",
+  "column_break_4",
+  "task_date",
+  "the_beneficiary",
+  "section_break_7",
+  "task_summary",
+  "task_status",
+  "section_break_10",
+  "task_challenges",
+  "column_break_12",
+  "recommendations",
+  "column_break_14",
+  "priorities_for_next_tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Task Type",
+   "options": "\nAdministrative\nTechnical",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.task_type==\"Administrative\"",
+   "fieldname": "administrative",
+   "fieldtype": "Select",
+   "label": "Administrative",
+   "options": "\nPlanning\nCoordination\nMeetings\nEvaluation\nOrganization"
+  },
+  {
+   "collapsible_depends_on": "eval:doc.task_type==\"Technical\"",
+   "depends_on": "eval:doc.task_type==\"Technical\"",
+   "fieldname": "technical",
+   "fieldtype": "Select",
+   "label": "Technical",
+   "options": "\nTechnical Supervision\nTraining\nTechnical Consulting\nTechnical Review"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Task Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "the_beneficiary",
+   "fieldtype": "Data",
+   "label": "The Beneficiary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_summary",
+   "fieldtype": "Text Editor",
+   "label": "Task Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task_status",
+   "fieldtype": "Select",
+   "label": "Task Status",
+   "options": "\nDone\nPending\nIn Progress"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_challenges",
+   "fieldtype": "Small Text",
+   "label": "Task Challenges"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priorities_for_next_tasks",
+   "fieldtype": "Small Text",
+   "label": "Priorities for Next Tasks"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-07 20:19:03.937140",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Task Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

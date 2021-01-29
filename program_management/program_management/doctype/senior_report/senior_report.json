@@ -1,0 +1,206 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-12-07 19:34:23.541560",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "report_subject",
+  "report_type",
+  "column_break_3",
+  "naming_series",
+  "report_period_section",
+  "from",
+  "column_break_7",
+  "to",
+  "section_break_9",
+  "report_prepared",
+  "name_of_reporter",
+  "column_break_12",
+  "designation",
+  "manager_of_reporter",
+  "task_type",
+  "administrative",
+  "technical",
+  "task_date",
+  "the_beneficiary",
+  "task_summary_sb",
+  "task_summary",
+  "section_break_21",
+  "task_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series ",
+   "options": "Admin-RP-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Report Type",
+   "options": "\nWeekly\nMonthly\nQuarterly\nBiannual\nAnnual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_period_section",
+   "fieldtype": "Section Break",
+   "label": "Report Period"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "report_prepared.employee_name",
+   "fieldname": "name_of_reporter",
+   "fieldtype": "Data",
+   "label": "Name of Reporter",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "report_prepared.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "report_prepared.leave_approver",
+   "fieldname": "manager_of_reporter",
+   "fieldtype": "Data",
+   "label": "Manager of Reporter",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Task Type",
+   "options": "\nAdministrative\nTechnical"
+  },
+  {
+   "depends_on": "eval:doc.task_type==\"Administrative\"",
+   "fieldname": "administrative",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Administrative",
+   "options": "\nPlanning\nCoordination\nMeetings\nEvaluation\nOrganization"
+  },
+  {
+   "depends_on": "eval:doc.task_type==\"Technical\"",
+   "fieldname": "technical",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Technical",
+   "options": "\nTechnical Supervision\nTraining\nTechnical Consulting\nTechnical Review"
+  },
+  {
+   "fieldname": "task_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Task Date"
+  },
+  {
+   "fieldname": "the_beneficiary",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "The Beneficiary"
+  },
+  {
+   "fieldname": "task_summary_sb",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Task Summary"
+  },
+  {
+   "fieldname": "task_summary",
+   "fieldtype": "Text Editor",
+   "label": "Task Summary"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task_details",
+   "fieldtype": "Table",
+   "label": "Task Details",
+   "options": "Task Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Senior Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "report_prepared",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "The Report Prepared By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_subject",
+   "fieldtype": "Data",
+   "label": "Report Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-12-07 20:43:01.362945",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Senior Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "report_subject",
+ "track_changes": 1
+}

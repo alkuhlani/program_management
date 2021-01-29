@@ -10,15 +10,15 @@
   "project",
   "project_name",
   "fund_project_code",
+  "project_location",
   "column_break_4",
   "expected_start_date",
   "expected_end_date",
   "project_manager",
-  "project_location",
+  "project_manager_name",
   "complain_mechanism_details_section",
   "date_of_complain",
   "entry_date",
-  "complain_mechanism_details",
   "name_of_complainant",
   "column_break_14",
   "age_group",
@@ -37,7 +37,6 @@
   "condition_classification",
   "column_break_28",
   "severity_of_the_condition",
-  "authority_concerned_with_the_complaint",
   "complaint_recipient",
   "name_of_complaint_recipient",
   "section_break_32",
@@ -45,6 +44,7 @@
   "complaint_supporting_documents",
   "concerned_with_resolving_the_complaint",
   "name_of_concerned_with_resolving_the_complaint",
+  "email_of_concerned_with_resolving_the_complaint",
   "section_break_36",
   "confirm_the_complaint",
   "column_break_38",
@@ -52,8 +52,8 @@
   "column_break_40",
   "action_taken_by_administration",
   "section_break_42",
-  "closing_date_of_the_complaint",
   "complaint_status",
+  "closing_date_of_the_complaint",
   "result_of_the_follow_up_meal_assistant",
   "column_break_45",
   "has_a_complaint_form_been_created",
@@ -65,6 +65,7 @@
    "fieldname": "project",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
    "reqd": 1
@@ -123,16 +124,9 @@
   },
   {
    "fieldname": "date_of_complain",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "label": "Date of Complain",
    "reqd": 1
-  },
-  {
-   "fieldname": "complain_mechanism_details",
-   "fieldtype": "Table",
-   "hidden": 1,
-   "label": "Complain Mechanism Details",
-   "options": "Complain Mechanism Details"
   },
   {
    "description": "Optional",
@@ -144,6 +138,7 @@
    "description": "Optional",
    "fieldname": "gender",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Gender",
    "options": "Gender"
   },
@@ -212,8 +207,7 @@
    "fieldname": "subject_of_complain",
    "fieldtype": "Data",
    "label": "Subject of Complain",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "condition_classification",
@@ -236,6 +230,7 @@
   {
    "fieldname": "complaint_recipient",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Complaint Recipient",
    "options": "Employee",
    "reqd": 1
@@ -257,12 +252,15 @@
   {
    "fieldname": "concerned_with_resolving_the_complaint",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
    "label": "Concerned with Resolving the Complaint",
    "options": "Employee"
   },
   {
    "fieldname": "section_break_36",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Response and Follow Up Details"
   },
   {
    "fieldname": "confirm_the_complaint",
@@ -289,7 +287,8 @@
   },
   {
    "fieldname": "section_break_42",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Complain Status Details"
   },
   {
    "fieldname": "closing_date_of_the_complaint",
@@ -299,8 +298,10 @@
   {
    "fieldname": "complaint_status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Complaint Status",
-   "options": "\nOpen\nClosed"
+   "options": "Open\nClosed"
   },
   {
    "fieldname": "column_break_45",
@@ -315,7 +316,7 @@
    "fieldname": "has_a_complaint_form_been_created",
    "fieldtype": "Select",
    "label": "Has a Complaint Form Been Created?",
-   "options": "\nYes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "notes",
@@ -357,13 +358,10 @@
    "fetch_from": "concerned_with_resolving_the_complaint.employee_name",
    "fieldname": "name_of_concerned_with_resolving_the_complaint",
    "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
    "label": "Name of Concerned with Resolving the Complaint",
    "read_only": 1
-  },
-  {
-   "fieldname": "authority_concerned_with_the_complaint",
-   "fieldtype": "Data",
-   "label": "Authority Concerned with the Complaint"
   },
   {
    "fieldname": "amended_from",
@@ -373,11 +371,26 @@
    "options": "Complain Mechanism",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "concerned_with_resolving_the_complaint.user_id",
+   "fieldname": "email_of_concerned_with_resolving_the_complaint",
+   "fieldtype": "Link",
+   "label": "Email of Concerned with Resolving the Complaint",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_manager_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-11-11 15:42:18.862164",
- "modified_by": "talal.hamati@bfdyemen.org",
+ "modified": "2021-01-23 00:20:37.693898",
+ "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Complain Mechanism",
  "owner": "t.azzan@partner-cons.com",
@@ -402,7 +415,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Projects User",
+   "role": "Projects Manager",
    "share": 1,
    "write": 1
   },
@@ -414,7 +427,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Projects Manager",
+   "role": "Complaints Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MEAL Senior",
    "share": 1,
    "write": 1
   }

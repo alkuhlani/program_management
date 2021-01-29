@@ -63,6 +63,7 @@
    "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "0",
    "fieldname": "is_group",
    "fieldtype": "Check",
@@ -76,6 +77,7 @@
    "options": "Outcome and Output"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "parent_outcome_and_output",
    "fieldtype": "Link",
    "label": "Parent Outcome and Output",
@@ -124,7 +126,7 @@
   }
  ],
  "is_tree": 1,
- "modified": "2020-11-22 15:34:56.156090",
+ "modified": "2020-11-24 23:27:52.693892",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Outcome and Output",

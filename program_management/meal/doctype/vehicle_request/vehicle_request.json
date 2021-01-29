@@ -1,0 +1,378 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-01-22 23:47:41.270773",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field_visit_plan",
+  "field_visit_plan_title",
+  "column_break_2",
+  "naming_series",
+  "section_break_9",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "project_location",
+  "column_breack_6",
+  "expected_start_date",
+  "expected_end_date",
+  "project_manager",
+  "project_manager_name",
+  "project_manager_email",
+  "date_section",
+  "date_of_vehicle_request",
+  "pick_up_from",
+  "drop_off_to",
+  "section_break_20",
+  "vehicle_remain_with_passenger",
+  "time_for_pick_up",
+  "drop_off_location",
+  "column_break_24",
+  "amount_of_time_with_vehicle",
+  "section_break_26",
+  "travel_overnight",
+  "column_break_28",
+  "travel_multiple_days",
+  "number_of_days",
+  "column_break_31",
+  "travel_request_form_completed",
+  "monthly_section",
+  "location",
+  "coordinator_name",
+  "column_break_36",
+  "start_date",
+  "end_date",
+  "section_break_39",
+  "work_multiple_monthly",
+  "number_of_monthly",
+  "monthly_travel_request",
+  "more_information_section",
+  "additional_travelers",
+  "additional_comments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_visit_plan",
+   "fieldtype": "Link",
+   "label": "Vehicle Request for Field Visit Plan",
+   "options": "Field Visit Plan",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "VR-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "field_visit_plan.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Project Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project_manager.employee_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project_manager.user_id",
+   "fieldname": "project_manager_email",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Project Manager Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_section",
+   "fieldtype": "Section Break",
+   "label": "Date of Vehicle Request"
+  },
+  {
+   "fieldname": "date_of_vehicle_request",
+   "fieldtype": "Date",
+   "label": "Date of Vehicle Request",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pick_up_from",
+   "fieldtype": "Datetime",
+   "label": "Pick-up from Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drop_off_to",
+   "fieldtype": "Date",
+   "label": "Drop-off to Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_remain_with_passenger",
+   "fieldtype": "Select",
+   "label": "Vehicle Remain with Passenger",
+   "options": "No\nYes",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_remain_with_passenger==\"No\"",
+   "fieldname": "time_for_pick_up",
+   "fieldtype": "Datetime",
+   "label": "Time for Pick-up"
+  },
+  {
+   "fieldname": "drop_off_location",
+   "fieldtype": "Datetime",
+   "label": "Drop-off Location"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.vehicle_remain_with_passenger==\"Yes\"",
+   "fieldname": "amount_of_time_with_vehicle",
+   "fieldtype": "Data",
+   "label": "Amount of Time with Vehicle"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_overnight",
+   "fieldtype": "Check",
+   "label": "Travel Overnight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_multiple_days",
+   "fieldtype": "Check",
+   "label": "Travel Multiple Days"
+  },
+  {
+   "depends_on": "eval:doc.travel_multiple_days==1",
+   "fieldname": "number_of_days",
+   "fieldtype": "Data",
+   "label": "Number of Days"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_request_form_completed",
+   "fieldtype": "Check",
+   "label": "Travel Request Form Completed"
+  },
+  {
+   "fieldname": "monthly_section",
+   "fieldtype": "Section Break",
+   "label": "Monthly"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "coordinator_name",
+   "fieldtype": "Data",
+   "label": "Coordinator's Name"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "work_multiple_monthly",
+   "fieldtype": "Check",
+   "label": "Work Multiple Monthly"
+  },
+  {
+   "depends_on": "eval:doc.work_multiple_monthly==1",
+   "fieldname": "number_of_monthly",
+   "fieldtype": "Data",
+   "label": "Number of Monthly"
+  },
+  {
+   "default": "0",
+   "fieldname": "monthly_travel_request",
+   "fieldtype": "Check",
+   "label": "Travel Request Form Completed"
+  },
+  {
+   "fieldname": "more_information_section",
+   "fieldtype": "Section Break",
+   "label": "More Information"
+  },
+  {
+   "fieldname": "additional_travelers",
+   "fieldtype": "Table",
+   "label": "Additional Travelers",
+   "options": "Additional Travelers"
+  },
+  {
+   "fieldname": "additional_comments",
+   "fieldtype": "Text Editor",
+   "label": "Additional Comments (Special Arrangements, Type of Vehicle, etc)"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "field_visit_plan.field_visit_plan_title",
+   "fieldname": "field_visit_plan_title",
+   "fieldtype": "Data",
+   "label": "Field Visit Plan Title",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-01-23 00:17:08.986821",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Vehicle Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "field_visit_plan",
+ "track_changes": 1
+}

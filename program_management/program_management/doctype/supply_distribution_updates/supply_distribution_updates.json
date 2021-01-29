@@ -4,35 +4,37 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "governorate",
-  "district",
-  "column_break_3",
+  "add_governorate",
+  "governorates",
+  "column_break_11",
+  "add_district",
+  "districts",
+  "section_break_8",
   "date",
   "name_of_the_target",
-  "column_break_7",
-  "type_of_supply",
+  "column_break_2",
   "no_of_supply",
+  "column_break_6",
+  "type_of_supply",
   "section_break_9",
-  "notes"
+  "notes",
+  "governorate",
+  "district"
  ],
  "fields": [
   {
    "fieldname": "governorate",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Governorate",
    "options": "Territory"
   },
   {
    "fieldname": "district",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "District",
    "options": "Territory"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "date",
@@ -41,18 +43,16 @@
    "label": "Date"
   },
   {
+   "description": "(Health Facilities, District\u2026.)",
    "fieldname": "name_of_the_target",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Name of the Target"
   },
   {
-   "fieldname": "column_break_7",
-   "fieldtype": "Column Break"
-  },
-  {
+   "description": "(Medicines, Medical Equipment, Cleaning Tools)",
    "fieldname": "type_of_supply",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Type of Supply"
   },
@@ -63,17 +63,61 @@
    "label": "Notes"
   },
   {
+   "columns": 1,
    "fieldname": "no_of_supply",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "No. of Supply"
   },
   {
    "fieldname": "section_break_9",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "columns": 2,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "columns": 1,
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
   }
  ],
  "istable": 1,
- "modified": "2020-11-14 22:50:43.232296",
+ "modified": "2020-12-31 23:11:13.698029",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Supply Distribution Updates",

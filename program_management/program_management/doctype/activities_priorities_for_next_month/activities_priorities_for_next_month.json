@@ -4,31 +4,33 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "governorate",
-  "district",
+  "add_governorate",
+  "governorates",
+  "column_break_5",
+  "add_district",
+  "section_break_4",
+  "districts",
   "date",
   "type_of_activity",
-  "column_break_3",
-  "comments"
+  "section_break_11",
+  "comments",
+  "governorate",
+  "district"
  ],
  "fields": [
   {
    "columns": 2,
    "fieldname": "governorate",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Governorate",
    "options": "Territory"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
   },
   {
    "columns": 2,
    "fieldname": "district",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "District",
    "options": "Territory"
   },
@@ -41,21 +43,60 @@
   },
   {
    "columns": 2,
+   "description": "(Training, Coordinator, Rehabilitation)",
    "fieldname": "type_of_activity",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Type of Activity"
   },
   {
-   "columns": 3,
+   "columns": 2,
    "fieldname": "comments",
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Comments"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "columns": 2,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "columns": 2,
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
   }
  ],
  "istable": 1,
- "modified": "2020-11-14 22:36:46.104414",
+ "modified": "2020-12-31 23:16:28.015946",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Activities Priorities for Next Month",

@@ -3,29 +3,35 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "governorate",
-  "date",
-  "no_of_beneficiaries",
-  "brief_description_of_the_activity",
-  "column_break_3",
-  "district",
   "type_of_activity",
-  "notes"
+  "column_break_3",
+  "no_of_beneficiaries",
+  "date",
+  "section_break_5",
+  "add_governorate",
+  "governorates",
+  "column_break_8",
+  "add_district",
+  "districts",
+  "section_break_9",
+  "brief_description_of_the_activity",
+  "column_break_13",
+  "notes",
+  "governorate",
+  "district"
  ],
  "fields": [
   {
-   "columns": 1,
    "fieldname": "governorate",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Governorate",
    "options": "Territory"
   },
   {
-   "columns": 1,
    "fieldname": "district",
    "fieldtype": "Link",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "District",
    "options": "Territory"
   },
@@ -41,9 +47,10 @@
    "label": "Date"
   },
   {
-   "columns": 1,
+   "columns": 2,
+   "description": "(Training, Coordinator, Rehabilitation, .....)",
    "fieldname": "type_of_activity",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Type of Activity"
   },
@@ -67,10 +74,50 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Notes"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
   }
  ],
  "istable": 1,
- "modified": "2020-11-21 00:41:57.742296",
+ "modified": "2020-12-31 23:06:57.029486",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Activities Updates",

@@ -4,168 +4,87 @@
  "engine": "InnoDB",
  "field_order": [
   "activity",
-  "activity_name",
-  "section_break_2",
-  "jan",
+  "start_date",
   "column_break_4",
-  "feb",
-  "column_break_6",
-  "mar",
+  "activity_name",
+  "end_date",
+  "section_break_6",
+  "status",
   "column_break_8",
-  "apr",
-  "column_break_10",
-  "may",
-  "column_break_12",
-  "jun",
-  "section_break_14",
-  "jul",
-  "column_break_16",
-  "aug",
-  "column_break_18",
-  "sep",
-  "column_break_20",
-  "oct",
-  "column_break_22",
-  "nov",
-  "column_break_24",
-  "dec"
+  "progress",
+  "section_break_2",
+  "description"
  ],
  "fields": [
   {
+   "depends_on": "eval:doc.output",
    "fieldname": "activity",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Activity",
    "options": "Activity"
   },
   {
+   "fetch_from": "activity.activity",
    "fieldname": "activity_name",
    "fieldtype": "Data",
-   "label": "Activity Name"
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_2",
    "fieldtype": "Section Break"
   },
   {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
    "default": "0",
-   "fieldname": "jan",
-   "fieldtype": "Check",
-   "label": "Jan"
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nWorking\nCompleted",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
-   "fieldname": "feb",
-   "fieldtype": "Check",
-   "label": "Feb"
-  },
-  {
-   "fieldname": "column_break_6",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "mar",
-   "fieldtype": "Check",
-   "label": "Mar"
-  },
-  {
-   "fieldname": "column_break_8",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "apr",
-   "fieldtype": "Check",
-   "label": "Apr"
-  },
-  {
-   "fieldname": "column_break_10",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "may",
-   "fieldtype": "Check",
-   "label": "May"
-  },
-  {
-   "fieldname": "column_break_12",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "jun",
-   "fieldtype": "Check",
-   "label": "Jun"
-  },
-  {
-   "fieldname": "section_break_14",
+   "fieldname": "section_break_6",
    "fieldtype": "Section Break"
   },
   {
-   "default": "0",
-   "fieldname": "jul",
-   "fieldtype": "Check",
-   "label": "Jul"
-  },
-  {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "aug",
-   "fieldtype": "Check",
-   "label": "Aug"
-  },
-  {
-   "fieldname": "column_break_18",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "sep",
-   "fieldtype": "Check",
-   "label": "Sep"
-  },
-  {
-   "fieldname": "column_break_20",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "oct",
-   "fieldtype": "Check",
-   "label": "Oct"
-  },
-  {
-   "fieldname": "column_break_22",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "nov",
-   "fieldtype": "Check",
-   "label": "Nov"
-  },
-  {
-   "fieldname": "column_break_24",
-   "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "dec",
-   "fieldtype": "Check",
-   "label": "Dec"
+   "fetch_from": "activity.description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2020-07-20 01:51:36.773374",
- "modified_by": "Administrator",
+ "modified": "2021-01-11 23:38:53.063600",
+ "modified_by": "talal.hamati@bfdyemen.org",
  "module": "Program Management",
  "name": "Work Plan Details",
  "owner": "Administrator",

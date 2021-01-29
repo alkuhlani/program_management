@@ -7,7 +7,6 @@ frappe.ui.form.on('Work Plan', {
 
 	},
 	get_activity: function(frm){
-		console.log('he')
 		frm.events.fill_activity(frm);
 	},
 	fill_activity: function (frm) {
@@ -23,3 +22,31 @@ frappe.ui.form.on('Work Plan', {
 		})
 	}
 });
+
+frappe.ui.form.on('Work Plan', {
+	setup: function(frm) {
+    	frm.fields_dict['work_plan_details'].grid.get_field('output').get_query = function(frm, cdt, cdn) {
+			var child = locals[cdt][cdn];
+			return{
+				filters: {
+					"project_proposal": frm.project_proposal
+				}
+			}
+	    }	   
+	}
+})
+
+
+frappe.ui.form.on('Work Plan', {
+	refresh(frm) {
+	cur_frm.set_query("activity", "work_plan_details", function(doc, cdt, cdn) {
+	    var d = locals[cdt][cdn];
+    	return{
+	    	filters: [
+		    
+		    	['Activity', 'output', '=', d.output]
+	    	]
+            	}
+        });
+	}
+})

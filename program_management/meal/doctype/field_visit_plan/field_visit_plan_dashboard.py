@@ -9,5 +9,9 @@ def get_data():
 				'label': _('Report'),
 				'items': ['Field Visit Report']
 			},
+			{
+				'label': _('Vehicle Request'),
+				'items': ['Vehicle Request']
+			},
 		]
 	}

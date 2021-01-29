@@ -17,6 +17,8 @@
   "sector",
   "column_breack_6",
   "project_manager",
+  "project_manager_name",
+  "project_manager_email",
   "project_location",
   "expected_start_date",
   "expected_end_date",
@@ -66,6 +68,7 @@
    "fieldname": "project",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Project",
    "options": "Project",
    "reqd": 1
@@ -98,8 +101,10 @@
   {
    "fetch_from": "project.project_manager",
    "fieldname": "project_manager",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Project Manager",
+   "options": "Employee",
    "read_only": 1
   },
   {
@@ -221,10 +226,26 @@
    "fieldtype": "Data",
    "label": "Sector",
    "read_only": 1
+  },
+  {
+   "fetch_from": "project_manager.user_id",
+   "fieldname": "project_manager_email",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Project Manager Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project_manager.employee_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2020-11-21 00:38:03.385034",
+ "modified": "2020-12-31 23:45:37.453926",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Monthly Report",
@@ -239,6 +260,54 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MEAL Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "MEAL Senior",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
    "share": 1,
    "write": 1
   }

@@ -29,8 +29,10 @@
  ],
  "fields": [
   {
+   "columns": 2,
    "fieldname": "governorate",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Governorate",
    "options": "Territory",
    "read_only": 1
@@ -40,8 +42,10 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "options": "Territory",
    "read_only": 1
@@ -62,8 +66,10 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "fieldname": "type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Type",
    "options": "Beneficiaries Type",
    "read_only": 1
@@ -84,6 +90,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "columns": 1,
    "default": "0",
    "fieldname": "men",
    "fieldtype": "Int",
@@ -96,6 +103,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "default": "0",
    "fieldname": "women",
    "fieldtype": "Int",
@@ -108,6 +116,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "default": "0",
    "fieldname": "boys",
    "fieldtype": "Int",
@@ -120,6 +129,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "default": "0",
    "fieldname": "girls",
    "fieldtype": "Int",
@@ -132,9 +142,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "default": "0",
    "fieldname": "unclassified",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Unclassified",
    "read_only": 1
   },
@@ -143,6 +155,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "fieldname": "total",
    "fieldtype": "Int",
    "in_list_view": 1,
@@ -162,7 +175,7 @@
   }
  ],
  "istable": 1,
- "modified": "2020-08-10 00:22:52.158417",
+ "modified": "2020-11-23 10:41:11.988466",
  "modified_by": "Administrator",
  "module": "MEAL",
  "name": "Indicator Log Detail",

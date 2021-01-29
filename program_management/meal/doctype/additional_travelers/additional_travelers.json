@@ -1,0 +1,54 @@
+{
+ "creation": "2021-01-22 23:45:57.213967",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "additional_travelers_name",
+  "employee_name",
+  "column_break_3",
+  "contact_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "additional_travelers_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Additional Travelers Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "additional_travelers_name.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "additional_travelers_name.cell_number",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Number",
+   "options": "Phone",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-01-22 23:45:57.213967",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Additional Travelers",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

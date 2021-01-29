@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "project",
   "project_title",
   "fund_code",
   "budget",
@@ -231,10 +232,18 @@
    "fieldtype": "Data",
    "label": "Project No",
    "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "permlevel": 5
   }
  ],
  "is_submittable": 1,
- "modified": "2020-09-20 08:36:50.856771",
+ "modified": "2021-01-14 00:48:41.784070",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Project Proposal",

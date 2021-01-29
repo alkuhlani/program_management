@@ -1,4 +1,5 @@
 {
+ "allow_rename": 1,
  "autoname": "field:project_code",
  "creation": "2020-07-20 01:53:59.459858",
  "doctype": "DocType",
@@ -32,7 +33,7 @@
    "read_only": 1
   }
  ],
- "modified": "2020-07-20 09:25:51.238005",
+ "modified": "2021-01-17 22:35:21.654906",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Project Dimension",

@@ -3,21 +3,30 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "governorate",
-  "district",
-  "visit_obj_scope",
-  "column_break_3",
+  "add_governorate",
+  "governorates",
+  "column_break_11",
+  "add_district",
+  "districts",
+  "section_break_8",
   "date",
   "name_of_the_target",
-  "brief_description_of_visit_results",
-  "column_break_7",
+  "column_break_2",
   "type_of_visit",
-  "visit_team"
+  "column_break_6",
+  "visit_team",
+  "section_break_13",
+  "brief_description_of_visit_results",
+  "column_break_15",
+  "visit_obj_scope",
+  "governorate",
+  "district"
  ],
  "fields": [
   {
    "fieldname": "governorate",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Governorate",
    "options": "Territory"
@@ -25,13 +34,10 @@
   {
    "fieldname": "district",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "District",
    "options": "Territory"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "date",
@@ -40,8 +46,10 @@
    "label": "Date"
   },
   {
+   "columns": 2,
+   "description": "(Health Facilities, District, \u2026.)",
    "fieldname": "name_of_the_target",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Name of the Target"
   },
@@ -52,18 +60,17 @@
    "label": "Visit Objective / Scope"
   },
   {
-   "fieldname": "column_break_7",
-   "fieldtype": "Column Break"
-  },
-  {
+   "columns": 2,
+   "description": "(Follow up, On Job, Training, \u2026.)",
    "fieldname": "type_of_visit",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Type of Visit"
   },
   {
+   "description": "(BFD Team, GHO, DHO, MoHP)",
    "fieldname": "visit_team",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Visit Team"
   },
   {
@@ -71,10 +78,60 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Brief Description of Visit Results"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "columns": 2,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "columns": 2,
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
   }
  ],
  "istable": 1,
- "modified": "2020-11-14 22:32:39.520956",
+ "modified": "2020-12-31 23:15:13.921553",
  "modified_by": "Administrator",
  "module": "Program Management",
  "name": "Monitoring Visits Updates",

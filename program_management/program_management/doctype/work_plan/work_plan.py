@@ -10,6 +10,8 @@ from frappe.model.document import Document
 class WorkPlan(Document):
 	def validate(self):
 		self.sort_details()
+	def on_submit(self):
+		self.create_logs()
 
 	def get_existing_activity_list(self):
 		"""
@@ -24,14 +26,14 @@ class WorkPlan(Document):
 			Returns list of active employees based on selected criteria
 			and for which salary structure exists
 		"""
-		return frappe.db.sql("""select ac.name as activity from `tabActivity` ac 
+		return frappe.db.sql("""select ac.name as activity, ac.activity as activity_name from `tabActivity` ac 
 		where ac.project_proposal=%s """,self.project_proposal, as_dict=True)
 
 	def fill_activity(self):			
 		#self.set('work_plan_details', [])
 		activities = self.get_activity_list()
 		if not activities:
-			frappe.throw(_("No employees for the mentioned criteria"))
+			frappe.throw(_("No activities for the mentioned project proposal"))
 		existing_activities=self.get_existing_activity_list()
 		for d in activities:
 			if d.activity not in existing_activities:
@@ -46,3 +48,17 @@ class WorkPlan(Document):
 
 
 
+	def create_logs(self):
+		if self.work_plan_details:
+			for m in self.get("work_plan_details"):
+				log_args = frappe._dict({
+					"doctype": "Work Plan Log",
+					"work_plan": self.name,
+					"project_proposal": self.project_proposal,
+					"activity": m.activity,
+					"activity_name": m.activity_name,
+					"expected_start_date": m.start_date,
+					"expected_end_date": m.end_date,
+				})
+				il = frappe.get_doc(log_args)
+				il.insert()

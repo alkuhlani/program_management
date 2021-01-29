@@ -47,8 +47,6 @@ frappe.ui.form.on('Indicator Log',
 
 
 
-
-
 frappe.ui.form.on('Indicator Log', {
 	refresh(frm) {
 	cur_frm.set_query("governorate", "achieved_indicators", function(doc, cdt, cdn) {
@@ -92,7 +90,6 @@ frappe.ui.form.on('Indicator Log', {
 })
 
 frappe.ui.form.on('Achieved Indicators', {
-    
     
     men: function(frm, cdt, cdn) {
         cur_frm.cscript.calculate_final(frm, cdt, cdn)
@@ -149,7 +146,9 @@ cur_frm.cscript.calculate_final= function(frm, cdt, cdn) {
 frappe.ui.form.on('Indicator Log', {
 	
 		// your code here
-    
+    validate: function(frm) {
+        frm.trigger("calculate_finald")
+    },
     total_achieved: function(frm) {
         frm.trigger("calculate_finald")
     },
@@ -158,23 +157,85 @@ frappe.ui.form.on('Indicator Log', {
     },
     
     calculate_finald: function(frm) {
-        if (frm.doc.total){
+        if (frm.doc.total && frm.doc.total_achieved){
             var rem = frm.doc.total - frm.doc.total_achieved;
             var final = flt(frm.doc.total_achieved / frm.doc.total *100);
             var finald = flt(frm.doc.remaining / frm.doc.total * 100);
             frm.set_value('remaining', rem);
             frm.set_value('cumulative_progress', final);
             frm.set_value('in_progress', finald);
+            frm.doc.save();
         }
+        
     },
-	
+
 });
 
 frappe.ui.form.on('Indicator Log', {
-	validate : function(frm, cdt, cdn) {
+    validate : function(frm, cdt, cdn) {
+        if (frm.doc.achieved_indicators){
        cur_frm.cscript.calculate_final(frm, cdt, cdn)
+        }
 	},
-	validate: function(frm) {
-        frm.trigger("calculate_finald")
-    }
+
 })
+
+
+
+/*frappe.ui.form.on('Indicator Log', {
+
+	indicator: function(frm) {
+       
+
+		frappe.call({
+			"method": "frappe.client.get",
+			args: {
+				doctype: "Indicator Log",
+				name: frm.doc.indicator
+			},
+			callback: function(data){
+				frm.fields_dict.achieved_indicators.grid.remove_all();
+			    //frm.fields_dict.table_name_target.grid.remove_all();
+				let indicator_detail = data.message.indicator_detail;
+				//let var_name = data.message.table_name_in_template;
+				for (var i in indicator_detail) {
+				//for (var iic in var_name){    
+					frm.add_child("achieved_indicators");
+					 //frm.add_child("target_table_name");
+					frm.fields_dict.achieved_indicators.get_value()[i].governorate = indicator_detail[i].governorate;
+					//frm.fields_dict.target_table_name.get_value()[iic].column_name_in_target_table = var_name[iic].column_name_in_template_table;*/
+
+
+////////////////////////////////////////////////
+
+frappe.ui.form.on('Indicator Log', {
+	refresh(frm) {
+		// your code here
+		var doc = frm.doc;
+		if(!frm.doc.__islocal) {
+
+			frm.add_custom_button(__("Get Indicators"), function() {
+			    frappe.call({
+        			"method": "frappe.client.get",
+        			args: {
+        				doctype: "Indicator Log",
+        				name: frm.doc.name
+        			},
+        			callback: function(data){
+        				let indicator_detail = data.message.indicator_log_detail;
+        				for (var i in indicator_detail) {
+        					var new_row =frm.add_child("achieved_indicators");
+        					new_row.governorate = indicator_detail[i].governorate;
+        					new_row.district = indicator_detail[i].district;
+        					new_row.category = indicator_detail[i].category;
+        					new_row.type = indicator_detail[i].type;
+        					new_row.age_group = indicator_detail[i].age_group;
+        				}
+        				frm.refresh();
+        			}
+        		});
+			});
+		}
+	},
+})
+
